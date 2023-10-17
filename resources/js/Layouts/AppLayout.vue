@@ -49,7 +49,22 @@ const logout = () => {
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    Accueil
+                                </NavLink>
+                                <NavLink :href="route('PatientManages.index')" :active="route().current('PatientManages.index')">
+                                    Tableau de bord
+                                </NavLink>
+                                <NavLink :href="route('PatientManages.create')" :active="route().current('PatientManages.create')">
+                                    Nouveau patient
+                                </NavLink>
+                                <NavLink :href="route('HospManages.medecin')" :active="route().current('HospManages.medecin')">
+                                    Espace Medecin
+                                </NavLink>
+                                <NavLink :href="route('HospManages.personnel')" :active="route().current('HospManages.personnel')">
+                                    Liste du personnel
+                                </NavLink>
+                                <NavLink :href="route('HospManages.planning')" :active="route().current('HospManages.planning')">
+                                    Planning
                                 </NavLink>
                             </div>
                         </div>
@@ -191,9 +206,18 @@ const logout = () => {
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
-                        </ResponsiveNavLink>
+                        <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                            Accueil
+                        </NavLink>
+                        <NavLink :href="route('HospManages.index')" :active="route().current('dHospManages.index')">
+                            Tableau de bord
+                        </NavLink>
+                        <NavLink :href="route('HospManages.create')" :active="route().current('dHospManages.create')">
+                            Nouveau patient
+                        </NavLink>
+                        <NavLink :href="route('HospManages.medecin')" :active="route().current('HospManages.medecin')">
+                            Espace Medecin
+                        </NavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
